@@ -6,6 +6,12 @@ I created this script to monitor and analyze my Internet connection reliability.
 Pingtest is a Perl script, which sends a ping every 10 seconds to check if the network connection is up. If the ping fails, the script starts to poll the connection every second to determine the duration of the network outage. The start and the end times are logged to a file.
 
 ```
+Checks the state of an network connection by sending single PING messages
+to Google DNS server. Script takes into account, if there is a single
+failed PING (propably just a temporary problem) or if there really is a
+larger problem with the connection.
+```
+```
 Usage: pingtest.pl [-hwlvVL] [-t time] [-a address] [-o logfile]
 
     -h         : this help message
